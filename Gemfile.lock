@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorator (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorator
+
+BUNDLED WITH
+   1.16.2
