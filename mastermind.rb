@@ -1,11 +1,9 @@
 require 'colorator'
 
-def initialize()
-  @row_index = 0
-  @colored_pegs = []
-  @black_white_pegs = []
-  @secret_code = []
-end
+@row_index = 0
+@colored_pegs = []
+@black_white_pegs = []
+@secret_code = []
 
 def play
   code_generator
