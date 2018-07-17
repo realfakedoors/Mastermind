@@ -1,3 +1,7 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "colorator"
+gem 'heroku'
+gem 'sinatra'
+gem 'puma'
+
+ruby '2.3.1'
