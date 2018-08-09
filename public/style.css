@@ -1,0 +1,161 @@
+body {
+	text-align: center;
+}
+
+/* The title, 'MASTERMIND.' */
+.title {
+	font-size: 54px;
+}
+
+/* 'How to Play' link. */
+.how-to-play {
+	font-size: 22px;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+.how-to-play:hover {
+	font-weight: 900;
+}
+
+/* Game board display. */
+#game_board, .colored_pegs, .bw_pegs {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+#game_board {
+  width: 180px;
+  display: inline-block;
+  position: relative;
+}
+
+.colored_pegs {
+  width: 140px;
+  text-align: center;
+}
+
+/* Colored guess pegs. */
+.display_peg {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+/* Black/white feedback pegs for each guess. */
+.feedback_peg {
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 4px 3px;
+}
+
+.bw_pegs {
+  text-align: right;
+}
+
+/* The code guessing container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    padding-bottom: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.peg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .peg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.peg:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .peg:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .peg:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Display columns separately */
+.peg-selector {
+	display: inline-block;
+}
+
+/* Style the submit button */
+.submit-button {
+	display: inline-block;
+    width: 142px;
+    margin-left: -14px;
+}
+
+.submit-button:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+/*Set each peg's color: */
+.red {
+	background-color: red;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.cyan {
+	background-color: cyan;
+}
+
+.magenta {
+	background-color: magenta;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.green {
+	background-color: green;
+}

@@ -82,3 +82,17 @@ def player_guess
   @temp_guess.each{|peg| this_guess << peg}
   @colored_pegs << this_guess
 end
+
+enable :sessions
+
+get '/' do
+  erb :index
+end
+          
+post '/' do
+  @first_peg = params["first-peg"]
+  @second_peg = params["second-peg"]
+  @third_peg = params["third-peg"]
+  @fourth_peg = params["fourth-peg"]
+  erb :index
+end
