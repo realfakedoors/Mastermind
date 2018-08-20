@@ -1,3 +1,11 @@
+html, body {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
 body {
 	text-align: center;
 }
@@ -5,18 +13,39 @@ body {
 /* The title, 'MASTERMIND.' */
 .title {
 	font-size: 54px;
+  margin: 4px;
 }
 
 /* 'How to Play' link. */
 .how-to-play {
 	font-size: 22px;
-    font-weight: 400;
-    color: black;
-    text-decoration: none;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
 }
 
 .how-to-play:hover {
 	font-weight: 900;
+}
+
+#game_container {
+  float: center;
+  margin-right: 33%;
+  margin-left: 33%;
+  margin-top: 15px;
+}
+
+.enter_your_guess, form {
+  float: right;
+  position: relative;
+}
+
+form {
+  margin-right: 9%;
+}
+
+.enter_your_guess {
+  margin-top: 0;
 }
 
 /* Game board display. */
@@ -29,6 +58,7 @@ body {
   width: 180px;
   display: inline-block;
   position: relative;
+  float: left;
 }
 
 .colored_pegs {
@@ -60,53 +90,54 @@ body {
   text-align: right;
 }
 
-/* The code guessing container */
+/* The code guessing container for each column*/
 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    padding-bottom: 35px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  padding-bottom: 35px;
+  margin-right: 33%;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Hide the browser's default radio button */
 .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 /* Create a custom radio button */
 .peg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .peg {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .peg:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .peg:after {
-    display: block;
+  display: block;
 }
 
 /* Style the indicator (dot/circle) */
@@ -127,8 +158,8 @@ body {
 /* Style the submit button */
 .submit-button {
 	display: inline-block;
-    width: 142px;
-    margin-left: -14px;
+  width: 142px;
+  margin-left: -14px;
 }
 
 .submit-button:hover {
@@ -158,4 +189,21 @@ body {
 
 .green {
 	background-color: green;
+}
+
+/* The feedback window. */
+
+.feedback_window {
+  border: 2px solid grey;
+  display: inline-block;
+  margin-top: 33px;
+  margin-right: 27%;
+}
+
+#message {
+  text-align: center;
+}
+
+.feedback {
+  text-align: left;
 }
