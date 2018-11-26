@@ -7,7 +7,8 @@ COLORS = [:blue, :green, :magenta, :cyan, :yellow, :red]
 @turn = 1
 
 @colored_pegs = []
-@black_white_pegs = []
+@black_white_pegs = [[]]
+#we start with a blank array in @black_white_pegs so its index == the current turn.
 
 def play(pegs)
   pegs.map!{|peg| peg.to_sym}
