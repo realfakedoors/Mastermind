@@ -13,7 +13,7 @@ get '/' do
 end
           
 post '/' do
-  unless game.game_over?
+  unless session[:game].game_over?
     pegs_entered = [ params["first-peg"], params["second-peg"], params["third-peg"], params["fourth-peg"] ]
     session[:game].play(pegs_entered)
     session[:game].advance_turn

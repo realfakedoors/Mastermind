@@ -1,6 +1,4 @@
-def Mastermind
-
-  COLORS = [:blue, :green, :magenta, :cyan, :yellow, :red]
+class Mastermind
   
   attr_accessor :turn, :colored_pegs, :black_white_pegs, :secret_code
   
@@ -13,7 +11,8 @@ def Mastermind
   end
   
   def generate_code
-    @secret_code = Array.new(4).map!{|peg| peg = COLORS.sample}
+    colors = [:blue, :green, :magenta, :cyan, :yellow, :red]
+    @secret_code = Array.new(4).map!{|peg| peg = colors.sample}
   end
 
   def play(pegs)
