@@ -190,6 +190,14 @@ form {
 	background-color: green;
 }
 
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
 /* The feedback window. */
 
 .feedback_window {

@@ -7,6 +7,12 @@ configure do
   enable :sessions
 end
 
+helpers do
+  def h(text)
+    Rack::Utils.escape_html(text)
+  end
+end
+
 get '/' do
   session[:game] ||= Mastermind.new
   erb :index
@@ -17,7 +23,7 @@ post '/' do
     pegs_entered = [ params["first-peg"], params["second-peg"], params["third-peg"], params["fourth-peg"] ]
     session[:game].play(pegs_entered)
     session[:game].advance_turn
-    erb :index, :locals => { :turn => session[:game].turn, :colored_pegs => session[:game].colored_pegs, :black_white_pegs => session[:game].black_white_pegs, :secret_code => session[:game].secret_code }
+    erb :index, :locals => { :colored_pegs => session[:game].colored_pegs, :black_white_pegs => session[:game].black_white_pegs }
   else
     erb :game_over_screen
   end

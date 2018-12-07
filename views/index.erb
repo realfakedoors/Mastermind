@@ -10,174 +10,50 @@
     <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)#Gameplay_and_rules" class="how-to-play" target="_blank">How to Play</a><br>
     <div id="game_container">
       <table id="game_board">
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="colored_pegs">
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-            <span class="display_peg"></span>
-          </td>
-          <td class="bw_pegs">
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-            <span class="feedback_peg"></span>
-          </td>
-        </tr>
+        <%  @colored_pegs.each_with_index do |row, i| %>
+
+          <%= h "<tr>" %>
+
+            <%= h "<td class='colored_pegs'>" %>
+              <% row.each do |peg| %>
+                <% color = peg.to_s %>
+                <%= h "<span class='display_peg #{color}'></span>" %>
+              <% end %>
+            <%= h "</td>" %>
+
+            <%= h "<td class='bw_pegs'>" %>
+              <% this_bw_row = @black_white_pegs[i] %>
+              <% this_bw_row.each do |peg| %>
+                <% color = peg.to_s %>
+                <%= h "<span class='feedback_peg #{color}'></span>" %>
+              <% end %>
+            <%= h "</td>" %>
+
+          <%= h "</tr>" %>
+
+        <% end %>
+
+        <% current_row = @colored_pegs.length %>
+        <% until current_row == 12 %>
+
+          <%= h "<tr>" %>
+
+            <%= h "<td class='colored_pegs'>" %>
+              <% 4.times do %>
+                <%= h "<span class='display_peg'></span>" %>
+              <% end %>
+            <%= h "</td>" %>
+
+            <%= h "<td class='bw_pegs'>" %>
+              <% 4.times do %>
+                <%= h "<span class='feedback_peg'></span>" %>
+              <% end %>
+            <%= h "</td>" %>
+
+          <%= h "</tr>" %>
+
+        <% current_row += 1 %>
+        <% end %>
       </table>
       <h1 class="enter_your_guess">Enter your guess:</h1>
       <form action="/" method="post">
@@ -288,13 +164,9 @@
         <br><input class="submit-button" type="submit" value="Guess!"/>
       </form><br>
       <table class="feedback_window">
-        <% unless @entry_error %>
           <tr><td colspan="2" id="message">You guessed: 0 0 0 0</td></tr>
           <tr class="feedback"><td>Correct color AND position:</td><td>2</td></tr>
           <tr class="feedback"><td>Correct color:</td><td>3</td></tr>
-        <% else %>
-          <td><p class="feedback">Whoops! Select 4 pegs!<p></td>
-        <% end %>
       </table>
     </div>
   </body>
