@@ -7,15 +7,9 @@ configure do
   enable :sessions
 end
 
-helpers do
-  def h(text)
-    Rack::Utils.escape_html(text)
-  end
-end
-
 get '/' do
   session[:game] ||= Mastermind.new
-  erb :index
+  erb :index, :locals => { :colored_pegs => session[:game].colored_pegs, :black_white_pegs => session[:game].black_white_pegs }
 end
           
 post '/' do
