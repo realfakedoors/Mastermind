@@ -25,10 +25,6 @@ class Mastermind
     @turn += 1
   end
 
-  def game_over?
-    true if victory? || defeat?
-  end
-
   def victory?
     true if @black_white_pegs.include?([:black, :black, :black, :black])
   end
