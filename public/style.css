@@ -77,12 +77,13 @@ form {
 
 /* Black/white feedback pegs for each guess. */
 .feedback_peg {
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   margin: 4px 3px;
+  border: 1px solid grey;
 }
 
 .bw_pegs {

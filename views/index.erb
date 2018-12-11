@@ -8,7 +8,9 @@
   <body>
     <h1 class="title">MASTERMIND</h1>
     <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)#Gameplay_and_rules" class="how-to-play" target="_blank">How to Play</a><br>
+    
     <div id="game_container">
+      
       <table id="game_board">
         <%  colored_pegs.each_with_index do |row, i| %>
 
@@ -55,119 +57,32 @@
         <% current_row += 1 %>
         <% end %>
       </table>
+      
       <h1 class="enter_your_guess">Enter your guess:</h1>
+      
       <form action="/" method="post">
+        <% input_pegs = ["first-peg", "second-peg", "third-peg", "fourth-peg"] %>
+        <% peg_colors = ["red", "blue", "cyan", "magenta", "yellow", "green"] %>
+        <% input_pegs.each do |peg| %>
         <div class="peg-selector">
+          <% peg_colors.each do |color| %>
           <label class="container">
-            <input type="radio" name="first-peg" value="red">
-            <span class="red peg"></span>
+            <input type="radio" name=<%= peg %> value=<%= color %>>
+            <span class="<%= color %> peg"></span>
           </label>
-          <label class="container">
-            <input type="radio" name="first-peg" value="blue">
-            <span class="blue peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="first-peg" value="cyan">
-            <span class="cyan peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="first-peg" value="magenta">
-            <span class="magenta peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="first-peg" value="yellow">
-            <span class="yellow peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="first-peg" value="green">
-            <span class="green peg"></span>
-          </label>
+          <% end %>
         </div>
-        <div class="peg-selector">
-          <label class="container">
-            <input type="radio" name="second-peg" value="red">
-            <span class="red peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="second-peg" value="blue">
-            <span class="blue peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="second-peg" value="cyan">
-            <span class="cyan peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="second-peg" value="magenta">
-            <span class="magenta peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="second-peg" value="yellow">
-            <span class="yellow peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="second-peg" value="green">
-            <span class="green peg"></span>
-          </label>
-         </div>
-         <div class="peg-selector">
-          <label class="container">
-            <input type="radio" name="third-peg" value="red">
-            <span class="red peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="third-peg" value="blue">
-            <span class="blue peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="third-peg" value="cyan">
-            <span class="cyan peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="third-peg" value="magenta">
-            <span class="magenta peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="third-peg" value="yellow">
-            <span class="yellow peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="third-peg" value="green">
-            <span class="green peg"></span>
-          </label>
-        </div>
-        <div class="peg-selector">
-          <label class="container">
-            <input type="radio" name="fourth-peg" value="red">
-            <span class="red peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="fourth-peg" value="blue">
-            <span class="blue peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="fourth-peg" value="cyan">
-            <span class="cyan peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="fourth-peg" value="magenta">
-            <span class="magenta peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="fourth-peg" value="yellow">
-            <span class="yellow peg"></span>
-          </label>
-          <label class="container">
-            <input type="radio" name="fourth-peg" value="green">
-            <span class="green peg"></span>
-          </label>
-        </div>
+        <% end %>
+        
         <br><input class="submit-button" type="submit" value="Guess!"/>
       </form><br>
+      
       <table class="feedback_window">
           <tr><td colspan="2" id="message">You guessed: 0 0 0 0</td></tr>
           <tr class="feedback"><td>Correct color AND position:</td><td>2</td></tr>
           <tr class="feedback"><td>Correct color:</td><td>3</td></tr>
       </table>
+      
     </div>
   </body>
 </html>
