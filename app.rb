@@ -18,10 +18,12 @@ post '/' do
   session[:game].advance_turn
   
   if session[:game].victory?
-    erb :victory_screen
+    template = :victory_screen
   elsif session[:game].defeat?
-    erb :defeat_screen
+    template = :defeat_screen
   else
-    erb :index, :locals => { :colored_pegs => session[:game].colored_pegs, :black_white_pegs => session[:game].black_white_pegs }
+    template = :index
   end
+  
+  erb template, :locals => { :colored_pegs => session[:game].colored_pegs, :black_white_pegs => session[:game].black_white_pegs, :turn => session[:game].turn, :secret_code => session[:game].secret_code }
 end
