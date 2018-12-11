@@ -16,7 +16,11 @@ class Mastermind
   end
 
   def play(pegs)
-    pegs.map!{|peg| peg.to_sym}
+    pegs.map! do |peg|
+      #we substitute blank pegs for any "nil" entries to prevent incomplete input.
+      peg == nil ? :blank : peg.to_sym
+    end
+    
     @colored_pegs << pegs
     feedback(pegs)
   end

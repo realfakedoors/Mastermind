@@ -61,20 +61,28 @@
       <h1 class="enter_your_guess">Enter your guess:</h1>
       
       <form action="/" method="post">
+        
         <% input_pegs = ["first-peg", "second-peg", "third-peg", "fourth-peg"] %>
         <% peg_colors = ["red", "blue", "cyan", "magenta", "yellow", "green"] %>
         <% input_pegs.each do |peg| %>
+        
         <div class="peg-selector">
+          
           <% peg_colors.each do |color| %>
+          
           <label class="container">
             <input type="radio" name=<%= peg %> value=<%= color %>>
             <span class="<%= color %> peg"></span>
           </label>
+          
           <% end %>
+          
         </div>
+        
         <% end %>
         
         <br><input class="submit-button" type="submit" value="Guess!"/>
+        
       </form><br>
       
       <table class="feedback_window">
