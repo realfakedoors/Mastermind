@@ -7,5 +7,55 @@
   </head>
   <body>
     <h1 class="title">DEFEAT! Try again!</h1>
+    
+    <div id="game_container">
+      
+      <table id="postgame_info">
+        
+        <tr>
+          <td class="game_over_message"> The secret code was: </td>
+        </tr>
+        
+        <tr>
+          <td class="colored_pegs">
+            <% secret_code.each do |peg| %>
+              <% color = peg.to_s %>
+              <span class="display_peg <%= color %>"></span>
+            <% end %>
+          </td>
+        </tr>
+        
+      </table><br>
+      
+      <table id="game_board">
+        <%  colored_pegs.each_with_index do |row, i| %>
+
+          <tr>
+
+            <td class='colored_pegs'>
+              <% row.each do |peg| %>
+                <% color = peg.to_s %>
+                <span class="display_peg <%= color %>"></span>
+              <% end %>
+            </td>
+
+            <td class='bw_pegs'>
+              <% this_bw_row = black_white_pegs[i] %>
+              <% this_bw_row.each do |peg| %>
+                <% color = peg.to_s %>
+                <span class="feedback_peg <%= color %>"></span>
+              <% end %>
+            </td>
+
+          </tr>
+
+        <% end %>
+      </table>
+      
+      <form action="/new_game" method="post">
+        <input class="submit-button new_game" type="submit" value="Play again!"/>
+      </form>
+    </div>
+    
   </body>
 </html>
