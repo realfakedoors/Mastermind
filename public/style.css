@@ -1,5 +1,5 @@
 html, body {
-  position: fixed;
+  position: static;
   right: 0;
   left: 0;
   bottom: 0;
@@ -29,22 +29,31 @@ body {
 }
 
 #game_container {
-  float: center;
-  margin-left: 33%;
   margin-top: 15px;
-}
-
-.enter_your_guess, form {
-  float: right;
+  margin-bottom: 15px;
   position: relative;
-}
-
-form {
-  margin-right: 9%;
+  top: 0px;
 }
 
 .enter_your_guess {
   margin-top: 0;
+  display: block;
+}
+
+.entry_field {
+  display: inline-block;
+  position: relative;
+  top: -240px;
+  left: 15px;
+}
+
+#postgame_info {
+  border: 1px solid grey;
+  display: block;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
 }
 
 /* Game board display. */
@@ -57,7 +66,8 @@ form {
   width: 180px;
   display: inline-block;
   position: relative;
-  float: left;
+  top: 0;
+  left: 0;
 }
 
 .colored_pegs {
@@ -96,7 +106,6 @@ form {
   position: relative;
   padding-left: 35px;
   padding-bottom: 35px;
-  margin-right: 33%;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -166,6 +175,11 @@ form {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
+.new_game {
+  display: block;
+  margin-top: 22px;
+}
+
 /*Set each peg's color: */
 .red {
 	background-color: red;
@@ -197,21 +211,4 @@ form {
 
 .white {
   background-color: white;
-}
-
-/* The feedback window. */
-
-.feedback_window {
-  border: 2px solid grey;
-  display: inline-block;
-  margin-top: 33px;
-  margin-right: 27%;
-}
-
-#message {
-  text-align: center;
-}
-
-.feedback {
-  text-align: left;
 }

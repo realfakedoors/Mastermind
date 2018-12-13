@@ -58,9 +58,9 @@
         <% end %>
       </table>
       
-      <h1 class="enter_your_guess">Enter your guess:</h1>
-      
-      <form action="/" method="post">
+      <form class="entry_field" action="/" method="post">
+        
+        <h2 class="enter_your_guess">Enter your guess:</h2> 
         
         <% input_pegs = ["first-peg", "second-peg", "third-peg", "fourth-peg"] %>
         <% peg_colors = ["red", "blue", "cyan", "magenta", "yellow", "green"] %>
@@ -83,13 +83,7 @@
         
         <br><input class="submit-button" type="submit" value="Guess!"/>
         
-      </form><br>
-      
-      <table class="feedback_window">
-          <tr><td colspan="2" id="message">You guessed: 0 0 0 0</td></tr>
-          <tr class="feedback"><td>Correct color AND position:</td><td>2</td></tr>
-          <tr class="feedback"><td>Correct color:</td><td>3</td></tr>
-      </table>
+      </form>
       
     </div>
   </body>

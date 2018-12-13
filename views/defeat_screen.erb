@@ -25,9 +25,10 @@
           </td>
         </tr>
         
-      </table><br>
+      </table>
       
       <table id="game_board">
+        
         <%  colored_pegs.each_with_index do |row, i| %>
 
           <tr>
@@ -52,8 +53,8 @@
         <% end %>
       </table>
       
-      <form action="/new_game" method="post">
-        <input class="submit-button new_game" type="submit" value="Play again!"/>
+      <form class="new_game" action="/new_game" method="post">
+        <input class="submit-button" type="submit" value="Play again!"/>
       </form>
     </div>
     
