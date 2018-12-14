@@ -25,7 +25,18 @@ body {
 }
 
 .how-to-play:hover {
-	font-weight: 900;
+  position: relative;
+  font-weight: 800;
+}
+
+.how-to-play:hover:after {
+  content: url(/tutorial.png);
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
 }
 
 #game_container {
