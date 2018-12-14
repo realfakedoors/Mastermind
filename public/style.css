@@ -39,6 +39,7 @@ body {
   z-index: 2;
 }
 
+/* Container div for board display and entry form. */
 #game_container {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -46,11 +47,7 @@ body {
   top: 0px;
 }
 
-.enter_your_guess {
-  margin-top: 0;
-  display: block;
-}
-
+/* Entry form. */
 .entry_field {
   display: inline-block;
   position: relative;
@@ -58,6 +55,12 @@ body {
   left: 15px;
 }
 
+.enter_your_guess {
+  margin-top: 0;
+  display: block;
+}
+
+/* Information table on victory/defeat screens. */
 #postgame_info {
   border: 1px solid grey;
   display: block;
@@ -111,7 +114,7 @@ body {
   text-align: right;
 }
 
-/* The code guessing container for each column*/
+/* The code guessing container for each column. */
 .container {
   display: block;
   position: relative;
@@ -125,14 +128,14 @@ body {
   user-select: none;
 }
 
-/* Hide the browser's default radio button */
+/* Hide the browser's default radio button. */
 .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Create a custom radio button */
+/* Create a custom radio button. */
 .peg {
   position: absolute;
   top: 0;
@@ -143,24 +146,24 @@ body {
   border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a grey background color. */
 .container:hover input ~ .peg {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+/* Create the indicator (the dot/circle - hidden when not checked). */
 .peg:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
+/* Show the indicator (dot/circle) when checked. */
 .container input:checked ~ .peg:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
+/* Style the indicator (dot/circle). */
 .container .peg:after {
  	top: 9px;
 	left: 9px;
@@ -170,12 +173,12 @@ body {
 	background: white;
 }
 
-/* Display columns separately */
+/* Display columns separately. */
 .peg-selector {
 	display: inline-block;
 }
 
-/* Style the submit button */
+/* Submit buttons. */
 .submit-button {
 	display: inline-block;
   width: 142px;
