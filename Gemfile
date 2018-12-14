@@ -3,4 +3,4 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'puma'
 
-ruby '2.3.8'
+ruby '2.5.3'
